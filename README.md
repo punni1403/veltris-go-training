@@ -4,66 +4,37 @@ Prerequisites:
 Familiarity with Golang syntax, variables, functions, and control flow statements.
 Basic understanding of Kubernetes concepts like pods, deployments, services, and namespaces.
 
-Objectives:
-
-Understand the purpose and benefits of Kubernetes Operators.
-Learn how to develop Operators using the Operator SDK for Golang.
-Gain hands-on experience building and deploying basic Operators.
-Explore advanced concepts like reconciliation loops and custom resource definitions (CRDs).
-
-Golang for intermediate
-1. Introduction - Day-1
-  a. Why golang
-  b. Advantages and disadvantages
-2. Module, Package and imports - Day 1
-  a. Repository , module, packages
-  b. go.mod, go.sum
-  c. go commands
-  d. Compiling and installing application
-3. Core packages - Day 2
-  a. String
-  b. Input/output
-  c. struct, method & interface
-  d. Errors
-  e. logging
-  f. Testing
-4. Concurreny - Day 3
-  a. Sequential vs Concurrent
-  b. go-routine program, main go-routine, anonymous go-routine
-  c. Go runtime schuduler
-  d. Wait Groups and examples
-  e. Channels
-  f. buffered, unbuffered, Reading and writing channels
-  g. Panic situations
-  h. Select statement
-  i. Mutex lock
-  j. Concurreny practise
-5. Api development - Day 4
-  a. web server and Api
-  b. Creating an API server
-  c. Mux Router
-  d. API Testing
-
-Kubernetes Operators:
-1. Pre-requisite - Day 1
-  a. CRD - Custom Resource defination
-  b. CR - Custom Resource
-  c. Custom Controller
-  d. client-go
-2. Kubernetes Operators - Day 1
-  0. reconciliation
-  a. why operators ?
-  b. what all ways available for operators creation.
-  c. Advantage of golang based operators vs helm based operators
-3. Golang based operators - Day 2
-  a. operator-sdk
-  b. init project
-  c. create CRD, go types controller
-  d. Reconcile function
-  e. Generate controller managers, controllers, CRDS, roles
-4. Live Demo - Day 3
-  a. existing operators in community
-  b. sample kubernetes operators
+1. Introduction
+	a. why golang
+	b. advantages and disadvantages
+2. module, Package and imports
+	a. repository , module, packages
+	b. go.mod, go.sum
+	c. go commands
+	d. compiling and installing application
+3. core packages
+	a. String
+	b. Input/output
+	c. struct, method & interface
+	d. Errors
+	e. logging
+	f. Testing
+4. concurreny
+	a. Sequential vs Concurrent
+	b. go-routine program, main go-routine, anonymous go-routine
+	c. Go runtime schuduler
+	d. Wait Groups and examples
+	e. Channels
+	f. buffered, unbuffered, Reading and writing channels
+	g. Panic situations
+	h. Select statement
+	i. Mutex lock
+	j. Concurreny practise
+5. Api development
+	a. web server and Api
+	b. Creating an API server
+	c. Mux Router
+	d. API Testing
 
 Additional Resources:
 Operator SDK Documentation: https://sdk.operatorframework.io/docs/ 
@@ -71,5 +42,4 @@ Kubernetes Operators Tutorial: https://developers.redhat.com/articles/2021/09/07
 Go by Example: https://go.dev/tour/ 
 Kubernetes Documentation: https://kubernetes.io/docs/home/
 
-This schedule is flexible and can be adjusted based on the pace of the participants. The goal is to provide a comprehensive understanding of developing Kubernetes Operators using Golang.
 
