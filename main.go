@@ -103,27 +103,27 @@ func routinetask(ch chan<- string, lock sync.Mutex) {
 */
 
 func main() {
+	fmt.Println("starting main...")
 
-	ch1 := make(chan string)
-	ch2 := make(chan string)
+	shared_Ch := make(chan int, 3)
 
-	go func() {
-		// time.Sleep(2 * time.Second)
-		ch1 <- "one"
-	}()
+	// producer
+	go producer(shared_Ch)
 
-	go func() {
-		// time.Sleep(3 * time.Second)
-		ch2 <- "two"
-	}()
+	// consumer
+	for val := range shared_Ch {
 
-	for i := 0; i < 2; i++ {
-
-		select {
-		case msg := <-ch1:
-			fmt.Println("Receive from ch1", msg)
-		case msg := <-ch2:
-			fmt.Println("Receive from ch2", msg)
-		}
+		fmt.Println("from consumer", val)
 	}
+
+}
+
+func producer(shared_Ch chan int) {
+	for i := 0; i < 10; i++ {
+		fmt.Println("in producer", i)
+		shared_Ch <- i
+	}
+
+	// Close the channel to indicate that no more values will be sent
+	close(shared_Ch)
 }
